@@ -22,4 +22,11 @@ resource "google_compute_instance" "default" {
       image = "debian-cloud/debian-12"
     }
   }
+
+  network_interface {
+    network = "default"
+    access_config {
+      // Ephemeral IP
+    }
+  }
 }
